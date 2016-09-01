@@ -14,7 +14,7 @@ export class AppComponent {
   // [] means property binding
   // () means event binding
   title = 'Custom App';
-  name = "Ward";
+  name = "ddd";
   wardsColor = "red";
 
   changeSuitColor() {
