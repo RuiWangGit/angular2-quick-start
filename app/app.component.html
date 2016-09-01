@@ -16,9 +16,9 @@
 
 
 <ul>
-  <li *ngFor="let customer of customers">
-    <span [style.color]="wardsColor">{{customer.id}}</span>&nbsp;
-    <span>{{customer.name}}</span>
+  <li *ngFor="let c of customers">
+    <app-customer [customer]="c" > </app-customer>
+
   </li>
 </ul>
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CustomerComponent } from './customer/customer.component'
 
 @Component({
     selector: 'my-app',
@@ -7,7 +8,8 @@ import { Component } from '@angular/core';
     //           <div [style.color]="wardsColor">Hello {{name}}</div>
     //           <button (click)="changeSuitColor()">Change Suit Color</button>
     //`
-    templateUrl: 'app/app.component.html'
+    templateUrl: 'app/app.component.html',
+    directives: [CustomerComponent]
 })
 
 export class AppComponent {
