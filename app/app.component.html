@@ -6,8 +6,10 @@
 </div>
 
 <!--two way binding-->
-<input type="text" [value]="name" (keyup)="name = $event.target.value">
-<input type="text" [(ngModel)]="name">
+<!--<input type="text" [value]="name" (keyup)="name = $event.target.value">-->
+<input type="text" [value]="name" (blur)="name = $event.target.value">
+
+<input type="text" [(ngModel)]="name"/>
 
 
 <button (click)="changeSuitColor()">Change Suit Color</button>
