@@ -15,6 +15,15 @@
 <button (click)="changeSuitColor()">Change Suit Color</button>
 
 
+<ul>
+  <li *ngFor="let customer of customers">
+    <span [style.color]="wardsColor">{{customer.id}}</span>&nbsp;
+    <span>{{customer.name}}</span>
+  </li>
+</ul>
+
+
+
 
 
 
