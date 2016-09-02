@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CustomerComponent } from './customer/customer.component'
+import { CustomersComponent } from './customers/customers.component'
 
 @Component({
     selector: 'my-app',
@@ -9,7 +9,7 @@ import { CustomerComponent } from './customer/customer.component'
     //           <button (click)="changeSuitColor()">Change Suit Color</button>
     //`
     templateUrl: 'app/app.component.html',
-    directives: [CustomerComponent]
+    directives: [CustomersComponent]
 })
 
 export class AppComponent {
@@ -18,13 +18,6 @@ export class AppComponent {
   title = 'Custom App';
   name = "ddd";
   wardsColor = "red";
-  customers = [
-    {id: 1, name: 'Ward'},
-    {id: 2, name: 'Kevin'},
-    {id: 3, name: 'Eric'},
-    {id: 4, name: 'Sally'},
-    {id: 5, name: 'Emmet'}
-  ]
 
   changeSuitColor() {
     this.wardsColor =  this.wardsColor === 'blue' ? 'red': 'blue';
