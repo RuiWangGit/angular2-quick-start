@@ -3,8 +3,9 @@ import { CustomerComponent } from './../customer/customer.component'
 
 
 @Component({
+    moduleId: module.id,
     selector: 'app-customers',
-    templateUrl: 'app/customers/customers.component.html',
+    templateUrl: 'customers.component.html',
     directives: [CustomerComponent]
 })
 export class CustomersComponent {
@@ -18,6 +19,6 @@ export class CustomersComponent {
   ]
 
 
-  constructor() { }
+  constructor() {console.log(module.id); }
 
 }
