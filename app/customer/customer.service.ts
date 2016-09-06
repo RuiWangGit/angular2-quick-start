@@ -19,8 +19,20 @@ export class CustomerService {
   getCustomers() {
     return this._http.get(URL_CUSTOMER)
       .map((response:Response) => response.json())
-      .catch(this._handleError);
+      .toPromise()
+      .catch((err: any)=> {
+        console.log(err);
+        return Promise.reject(err)
+      });
       ;
+  }
+
+
+  getCustomers_RxObservable() {
+    return this._http.get(URL_CUSTOMER)
+      .map((response:Response) => response.json())
+      .catch(this._handleError);
+    ;
   }
 
   _handleError(err: any) {
