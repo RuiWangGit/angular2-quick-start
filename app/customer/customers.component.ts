@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { CustomerComponent } from './../customer/customer.component'
-import { CustomerService }   from './../customer/customer.service';
+import { CustomerComponent } from './customer.component'
+import { CustomerService}  from './customer.service'
 import { Observable } from 'rxjs/Rx'
 
 
@@ -8,8 +8,8 @@ import { Observable } from 'rxjs/Rx'
     moduleId: module.id,
     selector: 'app-customers',
     templateUrl: 'customers.component.html',
-    directives: [CustomerComponent],
-    providers: [CustomerService]
+    directives: [CustomerComponent]
+
 })
 export class CustomersComponent implements OnInit{
   //customers: Promise<any[]>;

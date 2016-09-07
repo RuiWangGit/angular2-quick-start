@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { CustomersComponent } from './customers/customers.component';
+//import { CustomerService }   from './customer/customer.service';
+import { CustomersComponent } from './customer/customers.component';
 
-
+import { CustomerService } from './customer/index'
 
 @Component({
     selector: 'my-app',
@@ -11,7 +12,9 @@ import { CustomersComponent } from './customers/customers.component';
     //           <button (click)="changeSuitColor()">Change Suit Color</button>
     //`
     templateUrl: 'app/app.component.html',
+    providers: [CustomerService],
     directives: [CustomersComponent]
+
 })
 
 export class AppComponent {
@@ -24,11 +27,5 @@ export class AppComponent {
   changeSuitColor() {
     this.wardsColor =  this.wardsColor === 'blue' ? 'red': 'blue';
   }
-
-
-
-
-
-
 
 }
